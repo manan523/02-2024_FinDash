@@ -4,6 +4,9 @@ import Product from "../models/Product.js";
 import Transaction from "../models/Transaction.js";
 const router = express.Router();
 
+router.get("/", async (req, res) => {
+  res.send(`<h1>HELLO WORLD</h1>`);
+});
 router.get("/kpis", async (req, res) => {
   try {
     const kpis = await KPI.find();
