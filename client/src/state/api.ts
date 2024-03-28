@@ -8,15 +8,15 @@ export const api = createApi({
   endpoints: (build) => ({
                         //res , req 
     getKpis: build.query<Array<GetKpisResponse>,void>({
-      query: () => "kpis/",
+      query: () => "/api/kpis/",
       providesTags: ["Kpis"]
     }),
     getProducts: build.query<Array<GetProductsResponse>,void>({
-      query: () => "products/",
+      query: () => "/api/products/",
       providesTags: ["Products"]
     }),
     getTransactions: build.query<Array<GetTransactionsResponse>,void>({
-      query: () => "transactions/",
+      query: () => "/api/transactions/",
       providesTags: ["Transactions"]
     })
   })
